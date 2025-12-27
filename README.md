@@ -24,9 +24,14 @@ pip install pandas matplotlib kagglehub
 ```
 
 ### 2. Execução
-Execute o script principal:
+Tems dois scriots
+  - index: Script para obter as linguagens, habilidades e tecnologias mais solicitadas
 ```bash
 python src/index.py
+```
+  - levels: Script para criar o ranking dos níveis de experiencia mais requisitados
+```bash
+python src/levels.py
 ```
 
 ### 🛠️ Tecnologias Utilizadas
