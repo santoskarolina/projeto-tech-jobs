@@ -1,0 +1,4 @@
+postings.csv filter=lfs diff=lfs merge=lfs -text
+postings2.csv filter=lfs diff=lfs merge=lfs -text
+src/postings2.csv filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text

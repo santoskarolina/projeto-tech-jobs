@@ -1,0 +1,5 @@
+*.csv
+venv/
+.env
+"src/postings2.csv"
+"*.csv" 
