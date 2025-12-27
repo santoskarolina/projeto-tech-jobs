@@ -39,3 +39,8 @@ python src/levels.py
 - Pandas: Manipulação de DataFrames e limpeza de dados.
 - Matplotlib: Geração de visualizações gráficas de alta resolução (300 DPI).
 - KaggleHub: Gerenciamento dinâmico do dataset, evitando o armazenamento de arquivos pesados no GitHub.
+
+### 🛠️ Estrutura do Repositório 
+-  `src/index.py`: script principal
+-  `src/levels.py`: script para analisar os níveis de experiencia mais requisitados
+-  `linguagens.png`,  `tecnologias.png`, `habilidades.png` e  `niveis.png`: Gráficos gerads após a execução
