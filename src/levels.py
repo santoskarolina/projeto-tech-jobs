@@ -8,8 +8,8 @@ import kagglehub
 import re
 
 dicionario = {
-    'mid senior': 'senior', 'mid-senior': 'senior', 'sr': 'senior', 'sênior': 'senior', 'senior': 'senior',
-    'mid': 'mid-level', 'pleno': 'mid-level', 'associate': 'mid-level', 'mid-level': 'mid-level',
+    'mid senior': 'Sênior', 'mid-senior': 'Sênior', 'sr': 'Sênior', 'Sênior': 'Sênior', 'senior': 'Sênior',
+    'mid': 'Pleno', 'pleno': 'Pleno', 'associate': 'Pleno', 'mid-level': 'Pleno',
     'junior': 'junior', 'jr': 'junior', 'entry-level': 'junior', 'estágio': 'junior', 'estagiário': 'junior',
     'lead': 'lead', 'tech lead': 'lead', 'tech-lead': 'lead', 'team lead': 'lead','team-lead': 'lead', 'chief': 'lead', 'chefe': 'lead','manager': 'lead',
     'diretor': 'director', 'director': 'director',
