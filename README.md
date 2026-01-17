@@ -1,9 +1,17 @@
-# Análise de Competências em Vagas de Engenharia de Software
+# Desconstrução de Títulos: Identificação de Papéis Latentes 
+através de Clustering de Competências.
 
-Este projeto realiza uma análise quantitativa das linguagens de programação, tecnologias e habilidades interpessoais (*soft skills*) mais requisitadas no mercado de tecnologia atual. Os dados são processados a partir de um dataset de anúncios de vagas coletado via Kaggle.
+Esta pesquisa 
+contribui para a Inteligência do Mercado de Trabalho (LMI) ao fornecer um 
+framework para identificação dinâmica de papéis, oferecendo insights para a 
+atualização de currículos acadêmicos e estratégias de recrutamento industrial
 
 ## 📋 Sobre o Projeto
-O objetivo desta análise é identificar tendências de mercado para auxiliar na formação acadêmica e profissional. O script realiza a extração, limpeza (limpeza de caracteres especiais e correção de encoding) e a padronização de termos técnicos (ex: agrupando 'Nodejs' e 'Node.js').
+O objetivo central deste estudo é mapear como as tecnologias se organizam em 
+ecossistemas interdependentes e identificar perfis profissionais ocultos sob 
+nomenclaturas genéricas. Através dessa análise, busca-se oferecer uma visão mais 
+granular e precisa sobre o mercado de Engenharia de Software, construindo para a área 
+de Inteligência do Mercado de Trabalho. 
 
 ## 🚀 Como Executar
 
