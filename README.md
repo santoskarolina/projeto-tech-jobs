@@ -20,11 +20,11 @@ git clone https://github.com/santoskarolina/projeto-tech-jobs
 
 cd projeto-tech-jobs
 
-pip install pandas matplotlib kagglehub
+pip install pandas matplotlib kagglehub sentence-transformers torch
 ```
 
 ### 2. Execução
-Tems dois scriots
+Tems três scriots
   - index: Script para obter as linguagens, habilidades e tecnologias mais solicitadas
 ```bash
 python src/index.py
@@ -33,12 +33,17 @@ python src/index.py
 ```bash
 python src/levels.py
 ```
+  - bert: Script para obter as linguagens como dicionário fixo e tecnologias e habilidades com o uso do transformer BERT
+```bash
+python src/bert.py
+```
 
 ### 🛠️ Tecnologias Utilizadas
 - Python: Processamento de dados.
 - Pandas: Manipulação de DataFrames e limpeza de dados.
 - Matplotlib: Geração de visualizações gráficas de alta resolução (300 DPI).
 - KaggleHub: Gerenciamento dinâmico do dataset, evitando o armazenamento de arquivos pesados no GitHub.
+- Hugging Face / Sentence-Transformers: Implementação do modelo BERT (all-MiniLM-L6-v2) para normalização semântica e classificação de competências.
 
 ### 🛠️ Estrutura do Repositório 
 -  `src/index.py`: script principal
