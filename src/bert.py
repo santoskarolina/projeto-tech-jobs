@@ -11,7 +11,6 @@ import seaborn as sns
 from sklearn.preprocessing import MultiLabelBinarizer
 import numpy as np
 
-# 1. Configurações Iniciais e Modelos
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 DICIONARIO_LINGUAGENS = {
@@ -45,7 +44,6 @@ def classificar_hibrido(skill):
         return "Tecnologias", nome_padronizado
     return None, None
 
-# 2. Carga e Processamento
 path = kagglehub.dataset_download("yazeedfares/software-engineering-jobs-dataset")
 df = pd.read_csv(os.path.join(path, "postings2.csv"))
 
@@ -64,7 +62,6 @@ def processar_vaga(job_skills_str):
 df['tech_profile'] = df['job_skills'].apply(processar_vaga)
 df_filtered = df[df['tech_profile'].map(len) >= 2].copy().reset_index(drop=True)
 
-# 3. Vetorização (Top 100 Skills)
 all_techs = [item for sublist in df_filtered['tech_profile'] for item in sublist]
 top_techs = [t[0] for t in pd.Series(all_techs).value_counts().head(100).items()]
 df_filtered['tech_profile_filtered'] = df_filtered['tech_profile'].apply(lambda x: [s for s in x if s in top_techs])
@@ -73,7 +70,6 @@ mlb = MultiLabelBinarizer(classes=top_techs)
 X = mlb.fit_transform(df_filtered['tech_profile_filtered'])
 df_matrix = pd.DataFrame(X, columns=mlb.classes_)
 
-# 4. Clustering e PCA
 n_clusters = 5
 kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
 df_filtered['cluster'] = kmeans.fit_predict(df_matrix)
@@ -82,11 +78,9 @@ pca = PCA(n_components=2)
 coords = pca.fit_transform(df_matrix)
 df_filtered['pca_x'], df_filtered['pca_y'] = coords[:, 0], coords[:, 1]
 
-# 5. Cálculo do Outlier (Distância Euclidiana do Centro [0,0])
 df_filtered['distancia_centro'] = np.sqrt(df_filtered['pca_x']**2 + df_filtered['pca_y']**2)
 vaga_extrema = df_filtered.loc[df_filtered['distancia_centro'].idxmax()]
 
-# --- RELATÓRIO FINAL ---
 print(f"\nSilhouette Score: {silhouette_score(df_matrix, df_filtered['cluster']):.3f}")
 
 print("\n--- ANÁLISE DE PAPÉIS LATENTES ---")
