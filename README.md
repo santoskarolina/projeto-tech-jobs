@@ -25,17 +25,9 @@ pip install pandas matplotlib kagglehub sentence-transformers torch
 
 ### 2. Execução
 Tems três scriots
-  - index: Script para obter as linguagens, habilidades e tecnologias mais solicitadas
-```bash
-python src/index.py
-```
-  - levels: Script para criar o ranking dos níveis de experiencia mais requisitados
+
 ```bash
 python src/levels.py
-```
-  - bert: Script para obter as linguagens como dicionário fixo e tecnologias e habilidades com o uso do transformer BERT
-```bash
-python src/bert.py
 ```
 
 ### 🛠️ Tecnologias Utilizadas
@@ -43,9 +35,5 @@ python src/bert.py
 - Pandas: Manipulação de DataFrames e limpeza de dados.
 - Matplotlib: Geração de visualizações gráficas de alta resolução (300 DPI).
 - KaggleHub: Gerenciamento dinâmico do dataset, evitando o armazenamento de arquivos pesados no GitHub.
-- Hugging Face / Sentence-Transformers: Implementação do modelo BERT (all-MiniLM-L6-v2) para normalização semântica e classificação de competências.
+- Hugging Face / Sentence-Transformers: Implementação do modelo BERT (all-MiniLM-L6-v2) para normalização semântica e classificação dos clusters.
 
-### 🛠️ Estrutura do Repositório 
--  `src/index.py`: script principal
--  `src/levels.py`: script para analisar os níveis de experiencia mais requisitados
--  `linguagens.png`,  `tecnologias.png`, `habilidades.png` e  `niveis.png`: Gráficos gerads após a execução
